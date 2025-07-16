@@ -1,0 +1,16 @@
+#root {
+  /* max-width: 1280px; */
+  /* text-align: center; */
+  background-color: aqua;
+
+}
+
+h1 {
+
+  text-align: right;
+  padding : 100px;
+  margin : 100px;
+  
+  background-color:rgb(95, 84, 71);
+
+}

@@ -1,0 +1,33 @@
+
+.header {
+  overflow: hidden;
+  background-color: #be2626;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  max-height: fit-content;
+  display:flex;
+  
+}
+
+
+.header-image{
+
+    /* padding : 0% 10% 10% 10%; */
+    background-color: blueviolet;
+    text-align: center;
+  
+    position: static;
+    
+}
+
+.header-profile{
+    background-color: rgb(216, 154, 72);
+    width: 80%;
+
+}
+
+.header-profile-title{
+    padding : auto;
+    background-color: bisque; 
+}
