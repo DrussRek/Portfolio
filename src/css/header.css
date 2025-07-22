@@ -1,81 +1,130 @@
-
+/* ============================
+   Header principal
+============================ */
 .header {
-  overflow: hidden;
-  background-color: #be2626;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
+  position: relative;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-height: fit-content;
-  display:inline-flex;
-  
+  top: 0;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow);
+
+}
+
+/* ============================
+   Bloc Image
+============================ */
+.header-image {
+  flex: 0 0 220px;
+  width: 100%;
+  /* max-width: 220px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+ 
+
 }
 
 .header-profile-image {
-
-    border-radius: 25%;
-    width: 140px;
-    height: 120px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 20%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  padding-top: 10px;
 }
 
-.header-image{
+.header-image-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-accent);
+  margin-top: 0.5rem;
+}
 
-    background-color: blueviolet;
-    text-align: center;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
+/* ============================
+   Profil (statut, titre, phrase)
+============================ */
+.header-profile {
+  flex: 1;
+  text-align: center;
+  color: var(--color-white);
+  padding: var(--spacing);
+}
+
+.header-profile-status {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.header-profile-title {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.header-profile-catch-sentence {
+  font-size: 0.9rem;
+  color: var(--color-bg-light);
+  margin-bottom: 1rem;
+}
+
+/* ============================
+   Navigation
+============================ */
+.header-profile-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-profile-nav-item a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.header-profile-nav-item a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================
+   Responsive
+============================ */
+
+/* Mobile first : déjà géré */
+
+@media screen and (min-width: 700px) {
+  .header {
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     
-}
+  }
 
-.header-image-name{
-    /* background-color: bisque; */
-    text-align: center;
-    font-size: 1.5em;
-    color: rgb(151, 43, 43);
-    
-}
-
-.header-profile{
-    background-color: rgb(216, 154, 72);
-    width: 80%;
-    text-align: center;
-
-}
-
-.header-profile-title{
-    padding : auto;
-    background-color: rgb(173, 128, 73); 
-    text-align: center;
-}
-
-.header-profile-nav{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
+  .header-image {
+    width: 25%;
     padding: 0;
-    background-color: rgb(179, 130, 67);
-    margin: 0;
-    font-size: 1.2em;
-    color: white;
-    font-weight: bold;
-    bottom:0px;
-    position: relative;
-    width: 100%;
-    height: 50px;
-    align-items: center;
-}
+  }
 
-.header-profile-catch-sentence{
-    padding : auto;
-    background-color: bisque; 
-}
+  .header-profile {
+    width: 75%;
+    text-align: left;
+  }
 
-.header-profile-nav-item {
-    margin: 0 15px;
-    font-size: 1.2em;
+  .header-profile-nav ul {
+    justify-content: flex-start;
+  }
 }
-
