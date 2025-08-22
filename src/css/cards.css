@@ -6,7 +6,7 @@
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     padding: var(--spacing);
-    margin: var(--spacing);
+    margin: var(--spacing) 40px;
     width: 100%;
     max-width: 400px;
 }
@@ -19,11 +19,11 @@
 }
 
 .card-list {
-    
     padding: 0;
     margin: var(--spacing) 0 0 0;
     width: 100%;
     display: flex;
     flex-direction: line;
+    object-fit: cover;
 }
 
