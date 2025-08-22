@@ -1,1 +1,0 @@
-// Carte de projet avec ses informations
